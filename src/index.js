@@ -6,17 +6,17 @@ export const rules = (question) => {
   console.log(question);
 };
 
-export const calculation = (correctAnswer, exerciseQuestion) => {
-  console.log(`Question: ${exerciseQuestion}`);
-  let userAnswer = readlineSync.question('Your answer: ');
-  const loseStr = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${enterName}!`;
-  if (typeof correctAnswer === 'number') {
-    userAnswer = Number(userAnswer);
+export const calculation = (questionAnswer) => {
+  for (let i = 0; i < 3; i += 1) {
+    const [exerciseQuestion, correctAnswer] = questionAnswer();
+    console.log(`Question: ${exerciseQuestion}`);
+    let userAnswer = readlineSync.question('Your answer: ');
+    const loseStr = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${enterName}!`;
+    if (typeof correctAnswer === 'number') {
+      userAnswer = Number(userAnswer);
+    }
+    if (userAnswer === correctAnswer) console.log('Correct!');
+    else return loseStr;
   }
-  if (userAnswer === correctAnswer) return 'Correct!';
-  return loseStr;
-};
-
-export const congrats = () => {
-  console.log(`Congratulations, ${enterName}!`);
+  return `Congratulations, ${enterName}!`;
 };

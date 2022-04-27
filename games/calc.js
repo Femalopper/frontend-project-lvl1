@@ -1,22 +1,20 @@
-import { rules, calculation, congrats } from '../src/index.js';
+import { rules, calculation } from '../src/index.js';
 
 const calc = () => {
   rules('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
+  const questionAnswer = () => {
     const operators = ['+', '-', '*'];
     const randomIndex = Math.floor(Math.random() * 3);
-    const firstRandomNumber = Math.floor(Math.random() * 101);
-    const secondRandomNumber = Math.floor(Math.random() * 101);
+    const firstRandomNumber = Math.floor(Math.random() * 10);
+    const secondRandomNumber = Math.floor(Math.random() * 10);
     const exerciseQuestion = `${firstRandomNumber} ${operators[randomIndex]} ${secondRandomNumber}`;
     let correctAnswer = 0;
     if (operators[randomIndex] === '+') correctAnswer = firstRandomNumber + secondRandomNumber;
     if (operators[randomIndex] === '-') correctAnswer = firstRandomNumber - secondRandomNumber;
     if (operators[randomIndex] === '*') correctAnswer = firstRandomNumber * secondRandomNumber;
-    const result = calculation(correctAnswer, exerciseQuestion);
-    console.log(result);
-    if (result !== 'Correct!') return;
-  }
-  congrats();
+    return [exerciseQuestion, correctAnswer];
+  };
+  console.log(calculation(questionAnswer));
 };
 
 export default calc;
