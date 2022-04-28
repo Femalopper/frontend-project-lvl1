@@ -11,3 +11,5 @@ Play brain-gcd
 [![asciicast](https://asciinema.org/a/fCGk6dF8M50RPgNO8mB5cnUWD.svg)](https://asciinema.org/a/fCGk6dF8M50RPgNO8mB5cnUWD)
 Play brain-progression
 [![asciicast](https://asciinema.org/a/K4fvNJDtVvNXwnko7AiiYETNp.svg)](https://asciinema.org/a/K4fvNJDtVvNXwnko7AiiYETNp)
+Play brain-prime
+[![asciicast](https://asciinema.org/a/2LvLNMGWsQ0s0G6yXhmt8hR9t.svg)](https://asciinema.org/a/2LvLNMGWsQ0s0G6yXhmt8hR9t)
