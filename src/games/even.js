@@ -1,7 +1,7 @@
-import { calculation, rules } from '../src/index.js';
+import calculation from '../index.js';
 
 const isEvenOrOdd = () => {
-  rules('Answer "yes" if the number is even, otherwise answer "no".');
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   let correctAnswer;
 
@@ -11,7 +11,8 @@ const isEvenOrOdd = () => {
     else correctAnswer = 'no';
     return [exerciseQuestion, correctAnswer];
   };
-  console.log(calculation(questionAnswer));
+
+  console.log(calculation(rules, questionAnswer));
 };
 
 export default isEvenOrOdd;

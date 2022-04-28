@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
 import { enterName, userName } from './cli.js';
 
-export const rules = (question) => {
+const calculation = (rules, questionAnswer) => {
   userName();
-  console.log(question);
-};
 
-export const calculation = (questionAnswer) => {
+  console.log(rules);
+
   for (let i = 0; i < 3; i += 1) {
     const [exerciseQuestion, correctAnswer] = questionAnswer();
     console.log(`Question: ${exerciseQuestion}`);
@@ -20,3 +19,5 @@ export const calculation = (questionAnswer) => {
   }
   return `Congratulations, ${enterName}!`;
 };
+
+export default calculation;

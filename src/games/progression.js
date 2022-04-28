@@ -1,7 +1,8 @@
-import { rules, calculation } from '../src/index.js';
+import calculation from '../index.js';
 
 const findMissingNumber = () => {
-  rules('What number is missing in the progression?');
+  const rules = 'What number is missing in the progression?';
+
   const questionAnswer = () => {
     const firstRandomNumber = Math.floor(Math.random() * 11);
     const getInterval = (min, max) => Math.random() * (max - min) + min;
@@ -17,7 +18,8 @@ const findMissingNumber = () => {
     const exerciseQuestion = sequence.join(' ');
     return [exerciseQuestion, correctAnswer];
   };
-  console.log(calculation(questionAnswer));
+
+  console.log(calculation(rules, questionAnswer));
 };
 
 export default findMissingNumber;

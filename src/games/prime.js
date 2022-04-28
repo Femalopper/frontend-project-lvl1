@@ -1,7 +1,8 @@
-import { rules, calculation } from '../src/index.js';
+import calculation from '../index.js';
 
 const isPrimeNumber = () => {
-  rules('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
   const questionAnswer = () => {
     const exerciseQuestion = Math.floor(Math.random() * 101);
     let counter = 0;
@@ -13,7 +14,8 @@ const isPrimeNumber = () => {
     else correctAnswer = 'no';
     return [exerciseQuestion, correctAnswer];
   };
-  console.log(calculation(questionAnswer));
+
+  console.log(calculation(rules, questionAnswer));
 };
 
 export default isPrimeNumber;

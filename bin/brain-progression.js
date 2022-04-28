@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import findMissingNumber from '../games/progression.js';
+import findMissingNumber from '../src/games/progression.js';
 
 findMissingNumber();
