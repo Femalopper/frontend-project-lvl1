@@ -10,9 +10,15 @@ const calc = () => {
     const secondRandomNumber = Math.floor(Math.random() * 10);
     const exerciseQuestion = `${firstRandomNumber} ${operators[randomIndex]} ${secondRandomNumber}`;
     let correctAnswer = 0;
-    if (operators[randomIndex] === '+') correctAnswer = firstRandomNumber + secondRandomNumber;
-    if (operators[randomIndex] === '-') correctAnswer = firstRandomNumber - secondRandomNumber;
-    if (operators[randomIndex] === '*') correctAnswer = firstRandomNumber * secondRandomNumber;
+    if (operators[randomIndex] === '+') {
+      correctAnswer = firstRandomNumber + secondRandomNumber;
+    }
+    if (operators[randomIndex] === '-') {
+      correctAnswer = firstRandomNumber - secondRandomNumber;
+    }
+    if (operators[randomIndex] === '*') {
+      correctAnswer = firstRandomNumber * secondRandomNumber;
+    }
     return [exerciseQuestion, correctAnswer];
   };
 
