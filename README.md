@@ -8,6 +8,8 @@
 ```sh
 git clone git@github.com:Femalopper/frontend-project-lvl1.git
 
+cd frontend-project-lvl1
+
 make install
 
 sudo npm link
